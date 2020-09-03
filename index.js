@@ -1,9 +1,8 @@
-// Hook an event listener up with the button, and log out the input field's value when it's clicked
+// Push the emoji into the myEmoji's array, and clear the input field
+// However, if the input value is empty, don't do anything
 
 const myEmojis = ['👨‍💻', '⛷', '🍲']
 const emojiContainer = document.getElementById('emoji-container')
-const pushBtn = document.getElementById('push-btn')
-const emojiInput = document.getElementById('emoji-input')
 
 for (let i = 0; i < myEmojis.length; i++) {
   const emoji = document.createElement('span')
@@ -11,6 +10,14 @@ for (let i = 0; i < myEmojis.length; i++) {
   emojiContainer.append(emoji)
 }
 
-pushBtn.addEventListener('click', (e) => {
-  console.log(emojiInput.value)
+const pushBtn = document.getElementById('push-btn')
+pushBtn.addEventListener('click', function () {
+  const emojiInput = document.getElementById('emoji-input')
+
+  if (emojiInput.value !== '') {
+    myEmojis.push(emojiInput.value)
+    emojiInput.value = ''
+
+    console.log(myEmojis)
+  }
 })
