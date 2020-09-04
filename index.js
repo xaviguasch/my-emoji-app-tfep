@@ -33,3 +33,15 @@ unshiftBtn.addEventListener('click', function () {
     renderEmojis()
   }
 })
+
+const popBtn = document.getElementById('pop-btn')
+popBtn.addEventListener('click', () => {
+  myEmojis.pop()
+  renderEmojis()
+})
+
+const shiftBtn = document.getElementById('shift-btn')
+shiftBtn.addEventListener('click', () => {
+  myEmojis.shift()
+  renderEmojis()
+})

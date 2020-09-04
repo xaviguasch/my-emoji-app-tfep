@@ -46,7 +46,7 @@ input {
 
 button {
   font-family: Baloo;
-  letter-spacing: px;
+  letter-spacing: 1px;
   background: darkcyan;
   color: white;
   border: none;
